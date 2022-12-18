@@ -1,0 +1,39 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 50px;
+
+  &__title {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 28px;
+    line-height: 65px;
+  }
+
+  &__navigationItem--desktop {
+    font-size: 11px;
+    font-weight: bold;
+    font-family: "Spartan", sans-serif;
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--grey);
+    text-transform: uppercase;
+    padding-right: 30px;
+    cursor: pointer;
+    transition: 0.2s ease;
+
+    &:hover {
+      color: var(--hover);
+    }
+
+    &:last-child {
+      padding-right: 0px;
+    }
+  }
+
+  &__navigation--mobile {
+    display: none;
+  }
+}

@@ -1,0 +1,132 @@
+@import "./abstracts/mixins";
+@import "./abstracts/responsive";
+@import "./abstracts/loader";
+
+@import "./base/reset";
+@import "./base/typography";
+@import "./base/animations";
+
+@import "./layout/header";
+@import "./layout/facts";
+// @import "./layout/footer";
+
+@import "./themes/dark";
+
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spartan&display=swap");
+
+:root {
+  --white: #fff;
+  --default: #070724;
+  --hover: #38384f;
+  --grey: #838391;
+  --activeMercury: #419ebb;
+  --activeVenus: #eda249;
+  --activeEarth: #6f2ed6;
+  --activeMars: #d14c32;
+  --activeJupiter: #d83a34;
+  --activeSaturn: #cd5120;
+  --activeUranus: #1ec2a4;
+  --activeNeptune: #2d68f0;
+}
+
+body {
+  background: url(../../public/assets/background-stars.svg);
+  background-color: #070724;
+}
+
+.underline {
+  width: 100%;
+  border: 1px solid var(--hover);
+}
+
+.mercury.active {
+  background-color: var(--activeMercury);
+  border-color: var(--activeMercury);
+
+  &.mobile:after {
+    @include mobileBorder;
+    background-color: var(--activeMercury);
+    transition: 0.5s;
+  }
+}
+
+.venus.active {
+  background-color: var(--activeVenus);
+  border-color: var(--activeVenus);
+
+  &.mobile:after {
+    @include mobileBorder;
+    background-color: var(--activeVenus);
+    transition: 0.5s;
+  }
+}
+
+.earth.active {
+  background-color: var(--activeEarth);
+  border-color: var(--activeEarth);
+
+  &.mobile:after {
+    @include mobileBorder;
+    background-color: var(--activeEarth);
+    transition: 0.5s;
+  }
+}
+.mars.active {
+  background-color: var(--activeMars);
+  border-color: var(--activeMars);
+
+  &.mobile:after {
+    @include mobileBorder;
+    background-color: var(--activeMars);
+    transition: 0.5s;
+  }
+}
+.jupiter.active {
+  background-color: var(--activeJupiter);
+  border-color: var(--activeJupiter);
+
+  &.mobile:after {
+    @include mobileBorder;
+    background-color: var(--activeJupiter);
+    transition: 0.5s;
+  }
+}
+.saturn.active {
+  background-color: var(--activeSaturn);
+  border-color: var(--activeSaturn);
+
+  &.mobile:after {
+    @include mobileBorder;
+    background-color: var(--activeSaturn);
+    transition: 0.5s;
+  }
+}
+.uranus.active {
+  background-color: var(--activeUranus);
+  border-color: var(--activeUranus);
+
+  &.mobile:after {
+    @include mobileBorder;
+    background-color: var(--activeUranus);
+    transition: 0.5s;
+  }
+}
+.neptune.active {
+  background-color: var(--activeNeptune);
+  border-color: var(--activeNeptune);
+
+  &.mobile:after {
+    @include mobileBorder;
+    background-color: var(--activeNeptune);
+    transition: 0.5s;
+  }
+}
+
+.mobileFactsButtons {
+  display: none;
+}
+
+.underline.mobile {
+  display: none;
+}

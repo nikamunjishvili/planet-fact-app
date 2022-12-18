@@ -1,0 +1,667 @@
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spartan&display=swap");
+@media only screen and (max-width: 1080px) {
+  p {
+    font-size: 11px;
+  }
+  .header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header__title {
+    margin-bottom: 20px;
+  }
+  .sectionFacts {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    margin: 100px 50px !important;
+  }
+  .sectionFacts__image {
+    grid-column: span 2;
+  }
+  .sectionFacts__image img {
+    position: relative !important;
+  }
+  .sectionFacts__image .geologyImg {
+    display: none;
+  }
+  .sectionFacts__info {
+    grid-column: span 2;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-gap: 100px !important;
+    margin-top: 50px;
+  }
+  .sectionFacts__info__text {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 45px;
+  }
+  .sectionFacts__info__buttons {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .sectionFacts__info__buttons .button {
+    height: 60px;
+  }
+  .sectionFacts__additionalInfo {
+    grid-gap: 25px;
+  }
+  .sectionFacts__additionalInfo .box {
+    padding: 15px !important;
+  }
+  .sectionFacts__additionalInfo .box p {
+    font-size: 8px;
+  }
+  .sectionFacts__additionalInfo .box h2 {
+    font-size: 24px;
+    line-height: normal;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .sectionFacts__info {
+    display: block !important;
+    text-align: center !important;
+  }
+  .sectionFacts__info__text {
+    grid-gap: 25px;
+  }
+  .sectionFacts__info__buttons {
+    display: none !important;
+  }
+  .sectionFacts__additionalInfo {
+    grid-gap: 20px !important;
+    -ms-grid-columns: 1fr !important;
+        grid-template-columns: 1fr !important;
+  }
+  .sectionFacts__additionalInfo .box {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .mobileFactsButtons {
+    padding: 20px 50px !important;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .mobileFactsButtons .button {
+    font-weight: bold;
+    font-family: "Spartan", sans-serif;
+    text-transform: uppercase;
+    color: var(--white);
+    background-color: transparent !important;
+    border: none;
+    -webkit-transition: 1s ease;
+    transition: 1s ease;
+  }
+  .mobileFactsButtons .button::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    left: 0;
+    position: relative;
+    display: block;
+    top: 10px;
+    background-color: transparent;
+  }
+  .underline.mobile {
+    display: block !important;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .header {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .header__title {
+    margin-bottom: 0px;
+  }
+  .header__navigation--desktop {
+    display: none !important;
+  }
+  .header__navigation--mobile {
+    color: var(--white);
+    font-size: 24px;
+    display: block !important;
+  }
+  .mobileNavigation {
+    background-color: var(--default);
+    padding-top: 50px;
+    height: 100vh;
+  }
+  .mobileNavigation__items {
+    display: -ms-grid;
+    display: grid;
+    justify-items: start;
+    padding: 0px 50px;
+  }
+  .mobileNavigation__items .mobileItem {
+    color: var(--white);
+    font-size: 24px;
+    border-bottom: 1px solid var(--grey);
+    width: 100%;
+    padding: 30px 0px;
+    text-align: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .mobileNavigation__items .mobileItem:before {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: red;
+    margin-right: 20px;
+  }
+  .mobileNavigation__items .mobileItem.mercury::before {
+    background-color: var(--activeMercury);
+  }
+  .mobileNavigation__items .mobileItem.venus::before {
+    background-color: var(--activeVenus);
+  }
+  .mobileNavigation__items .mobileItem.earth::before {
+    background-color: var(--activeEarth);
+  }
+  .mobileNavigation__items .mobileItem.mars::before {
+    background-color: var(--activeMars);
+  }
+  .mobileNavigation__items .mobileItem.jupiter::before {
+    background-color: var(--activeJupiter);
+  }
+  .mobileNavigation__items .mobileItem.saturn::before {
+    background-color: var(--activeSaturn);
+  }
+  .mobileNavigation__items .mobileItem.uranus::before {
+    background-color: var(--activeUranus);
+  }
+  .mobileNavigation__items .mobileItem.neptune::before {
+    background-color: var(--activeNeptune);
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .header {
+    padding: 20px !important;
+  }
+  .mobileNavigation__items {
+    padding: 0px 20px !important;
+  }
+  .mobileNavigation__items .mobileItem {
+    font-size: 15px !important;
+  }
+  .mobileNavigation {
+    padding-top: 10px !important;
+  }
+  .mobileFactsButtons {
+    padding: 20px 20px !important;
+  }
+  .sectionFacts {
+    margin: 100px 20px !important;
+  }
+}
+
+.loader {
+  border: 16px solid var(--darkElement);
+  border-radius: 50%;
+  border-top: 16px solid var(--lightElement);
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  /* Safari */
+  animation: spin 2s linear infinite;
+  margin: 0 auto;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: initial;
+}
+
+h1 {
+  font-size: 80px;
+  line-height: 103px;
+  font-family: "Antonio", sans-serif;
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 52px;
+  letter-spacing: -1.5px;
+  font-family: "Antonio", sans-serif;
+}
+
+h3 {
+  font-size: 12px;
+  line-height: 25px;
+  letter-spacing: 2.6px;
+  font-family: "Antonio", sans-serif;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 11px;
+  line-height: 25px;
+  letter-spacing: 1px;
+  font-family: "Antonio", sans-serif;
+  font-weight: bold;
+}
+
+p {
+  font-family: "Spartan", sans-serif;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 50px;
+}
+
+.header__title {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 28px;
+  line-height: 65px;
+}
+
+.header__navigationItem--desktop {
+  font-size: 11px;
+  font-weight: bold;
+  font-family: "Spartan", sans-serif;
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--grey);
+  text-transform: uppercase;
+  padding-right: 30px;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.header__navigationItem--desktop:hover {
+  color: var(--hover);
+}
+
+.header__navigationItem--desktop:last-child {
+  padding-right: 0px;
+}
+
+.header__navigation--mobile {
+  display: none;
+}
+
+.sectionFacts {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 1fr;
+      grid-template-columns: 3fr 1fr;
+  margin: 100px 165px;
+}
+
+.sectionFacts__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sectionFacts__image img {
+  max-width: 290px;
+  position: absolute;
+  z-index: 1;
+}
+
+.sectionFacts__image .geologyImg {
+  width: 160px;
+  z-index: 2;
+  margin-top: 9%;
+}
+
+.sectionFacts__info {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 20px;
+}
+
+.sectionFacts__info h1 {
+  color: var(--white);
+}
+
+.sectionFacts__info--content {
+  color: var(--white);
+}
+
+.sectionFacts__info--source {
+  color: var(--grey);
+}
+
+.sectionFacts__info--source a {
+  font-weight: bold;
+  color: var(--grey);
+}
+
+.sectionFacts__info--source a span {
+  text-decoration: underline;
+}
+
+.sectionFacts__info__buttons {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 15px;
+}
+
+.sectionFacts__info__buttons .button {
+  text-align: left;
+  background: var(--default);
+  border: 1px solid var(--grey);
+  color: var(--white);
+  font-size: 12px;
+  font-family: "Spartan", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 15px 25px 10px 25px;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.sectionFacts__info__buttons .button span {
+  padding-right: 15px;
+  color: var(--grey);
+  font-family: "Spartan", sans-serif;
+}
+
+.sectionFacts__info__buttons .button:hover {
+  background-color: var(--hover);
+  border-color: var(--hover);
+}
+
+.sectionFacts__info__buttons .button .active {
+  background: red;
+}
+
+.sectionFacts__additionalInfo {
+  grid-column: span 2;
+  margin-top: 80px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 60px;
+}
+
+.sectionFacts__additionalInfo .box {
+  border: 1px solid var(--grey);
+  padding: 15px 25px;
+}
+
+.sectionFacts__additionalInfo .box p {
+  color: var(--grey);
+  font-weight: bold;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.sectionFacts__additionalInfo .box h2 {
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+:root {
+  --white: #fff;
+  --default: #070724;
+  --hover: #38384f;
+  --grey: #838391;
+  --activeMercury: #419ebb;
+  --activeVenus: #eda249;
+  --activeEarth: #6f2ed6;
+  --activeMars: #d14c32;
+  --activeJupiter: #d83a34;
+  --activeSaturn: #cd5120;
+  --activeUranus: #1ec2a4;
+  --activeNeptune: #2d68f0;
+}
+
+body {
+  background: url(../../public/assets/background-stars.svg);
+  background-color: #070724;
+}
+
+.underline {
+  width: 100%;
+  border: 1px solid var(--hover);
+}
+
+.mercury.active {
+  background-color: var(--activeMercury);
+  border-color: var(--activeMercury);
+}
+
+.mercury.active.mobile:after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  left: 0;
+  position: relative;
+  display: block;
+  top: 10px;
+  background-color: transparent;
+  background-color: var(--activeMercury);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.venus.active {
+  background-color: var(--activeVenus);
+  border-color: var(--activeVenus);
+}
+
+.venus.active.mobile:after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  left: 0;
+  position: relative;
+  display: block;
+  top: 10px;
+  background-color: transparent;
+  background-color: var(--activeVenus);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.earth.active {
+  background-color: var(--activeEarth);
+  border-color: var(--activeEarth);
+}
+
+.earth.active.mobile:after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  left: 0;
+  position: relative;
+  display: block;
+  top: 10px;
+  background-color: transparent;
+  background-color: var(--activeEarth);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.mars.active {
+  background-color: var(--activeMars);
+  border-color: var(--activeMars);
+}
+
+.mars.active.mobile:after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  left: 0;
+  position: relative;
+  display: block;
+  top: 10px;
+  background-color: transparent;
+  background-color: var(--activeMars);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.jupiter.active {
+  background-color: var(--activeJupiter);
+  border-color: var(--activeJupiter);
+}
+
+.jupiter.active.mobile:after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  left: 0;
+  position: relative;
+  display: block;
+  top: 10px;
+  background-color: transparent;
+  background-color: var(--activeJupiter);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.saturn.active {
+  background-color: var(--activeSaturn);
+  border-color: var(--activeSaturn);
+}
+
+.saturn.active.mobile:after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  left: 0;
+  position: relative;
+  display: block;
+  top: 10px;
+  background-color: transparent;
+  background-color: var(--activeSaturn);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.uranus.active {
+  background-color: var(--activeUranus);
+  border-color: var(--activeUranus);
+}
+
+.uranus.active.mobile:after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  left: 0;
+  position: relative;
+  display: block;
+  top: 10px;
+  background-color: transparent;
+  background-color: var(--activeUranus);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.neptune.active {
+  background-color: var(--activeNeptune);
+  border-color: var(--activeNeptune);
+}
+
+.neptune.active.mobile:after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  left: 0;
+  position: relative;
+  display: block;
+  top: 10px;
+  background-color: transparent;
+  background-color: var(--activeNeptune);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.mobileFactsButtons {
+  display: none;
+}
+
+.underline.mobile {
+  display: none;
+}
+/*# sourceMappingURL=main.css.map */

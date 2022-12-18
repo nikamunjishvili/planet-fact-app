@@ -1,0 +1,108 @@
+.sectionFacts {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  margin: 100px 165px;
+
+  &__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      max-width: 290px;
+      position: absolute;
+      z-index: 1;
+    }
+
+    .geologyImg {
+      width: 160px;
+      z-index: 2;
+      margin-top: 9%;
+    }
+  }
+
+  &__info {
+    display: grid;
+    grid-gap: 20px;
+
+    h1 {
+      color: var(--white);
+    }
+
+    &--content {
+      color: var(--white);
+    }
+
+    &--source {
+      color: var(--grey);
+
+      a {
+        font-weight: bold;
+        color: var(--grey);
+
+        span {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &__buttons {
+      display: grid;
+      grid-gap: 15px;
+
+      .button {
+        text-align: left;
+        background: var(--default);
+        border: 1px solid var(--grey);
+        color: var(--white);
+        font-size: 12px;
+        font-family: "Spartan", sans-serif;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 15px 25px 10px 25px;
+        cursor: pointer;
+        transition: 0.2s ease;
+
+        span {
+          padding-right: 15px;
+          color: var(--grey);
+          font-family: "Spartan", sans-serif;
+        }
+
+        &:hover {
+          background-color: var(--hover);
+          border-color: var(--hover);
+        }
+
+        .active {
+          background: red;
+        }
+      }
+    }
+  }
+
+  &__additionalInfo {
+    grid-column: span 2;
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 60px;
+
+    .box {
+      border: 1px solid var(--grey);
+      padding: 15px 25px;
+
+      p {
+        color: var(--grey);
+        font-weight: bold;
+        font-size: 11px;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        color: var(--white);
+        text-transform: uppercase;
+      }
+    }
+  }
+}

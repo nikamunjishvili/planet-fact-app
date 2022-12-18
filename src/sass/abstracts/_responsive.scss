@@ -1,0 +1,236 @@
+@media only screen and (max-width: 1080px) {
+  p {
+    font-size: 11px;
+  }
+
+  .header {
+    flex-direction: column;
+
+    &__title {
+      margin-bottom: 20px;
+    }
+  }
+
+  .sectionFacts {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 100px 50px !important;
+
+    &__image {
+      grid-column: span 2;
+
+      img {
+        position: relative !important;
+      }
+
+      .geologyImg {
+        display: none;
+      }
+    }
+
+    &__info {
+      grid-column: span 2;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 100px !important;
+      margin-top: 50px;
+
+      &__text {
+        display: grid;
+        grid-gap: 45px;
+      }
+
+      &__buttons {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        .button {
+          height: 60px;
+        }
+      }
+    }
+
+    &__additionalInfo {
+      grid-gap: 25px;
+
+      .box {
+        padding: 15px !important;
+
+        p {
+          font-size: 8px;
+        }
+
+        h2 {
+          font-size: 24px;
+          line-height: normal;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .sectionFacts {
+    &__info {
+      display: block !important;
+      text-align: center !important;
+
+      &__text {
+        grid-gap: 25px;
+      }
+
+      &__buttons {
+        display: none !important;
+      }
+    }
+
+    &__additionalInfo {
+      grid-gap: 20px !important;
+      grid-template-columns: 1fr !important;
+
+      .box {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  .mobileFactsButtons {
+    padding: 20px 50px !important;
+    display: flex !important;
+    justify-content: space-between;
+
+    .button {
+      font-weight: bold;
+      font-family: "Spartan", sans-serif;
+      text-transform: uppercase;
+      color: var(--white);
+      background-color: transparent !important;
+      border: none;
+      transition: 1s ease;
+
+      &::after {
+        @include mobileBorder;
+      }
+    }
+  }
+
+  .underline.mobile {
+    display: block !important;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .header {
+    justify-content: space-between;
+    flex-direction: row;
+
+    &__title {
+      margin-bottom: 0px;
+    }
+
+    &__navigation {
+      &--desktop {
+        display: none !important;
+      }
+
+      &--mobile {
+        color: var(--white);
+        font-size: 24px;
+        display: block !important;
+      }
+    }
+  }
+
+  .mobileNavigation {
+    background-color: var(--default);
+    padding-top: 50px;
+    height: 100vh;
+
+    &__items {
+      display: grid;
+      justify-items: start;
+      padding: 0px 50px;
+
+      .mobileItem {
+        color: var(--white);
+        font-size: 24px;
+        border-bottom: 1px solid var(--grey);
+        width: 100%;
+        padding: 30px 0px;
+        text-align: left;
+        display: flex;
+
+        &:before {
+          content: "";
+          display: inline-block;
+          width: 25px;
+          height: 25px;
+          -moz-border-radius: 50%;
+          -webkit-border-radius: 50%;
+          border-radius: 50%;
+          background-color: red;
+          margin-right: 20px;
+        }
+
+        &.mercury::before {
+          background-color: var(--activeMercury);
+        }
+
+        &.venus::before {
+          background-color: var(--activeVenus);
+        }
+
+        &.earth::before {
+          background-color: var(--activeEarth);
+        }
+
+        &.mars::before {
+          background-color: var(--activeMars);
+        }
+
+        &.jupiter::before {
+          background-color: var(--activeJupiter);
+        }
+
+        &.saturn::before {
+          background-color: var(--activeSaturn);
+        }
+
+        &.uranus::before {
+          background-color: var(--activeUranus);
+        }
+
+        &.neptune::before {
+          background-color: var(--activeNeptune);
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .header {
+    padding: 20px !important;
+  }
+
+  .mobileNavigation__items {
+    padding: 0px 20px !important;
+
+    .mobileItem {
+      font-size: 15px !important;
+    }
+  }
+
+  .mobileNavigation {
+    padding-top: 10px !important;
+  }
+
+  .mobileFactsButtons {
+    padding: 20px 20px !important;
+  }
+
+  .sectionFacts {
+    margin: 100px 20px !important;
+  }
+}
