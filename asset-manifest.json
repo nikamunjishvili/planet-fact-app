@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/planet-fact-app/static/css/main.77e03b6b.css",
+    "main.js": "/planet-fact-app/static/js/main.fe07bb61.js",
+    "static/media/background-stars.svg": "/planet-fact-app/static/media/background-stars.f6233a6a8d2351c57f2b.svg",
+    "index.html": "/planet-fact-app/index.html",
+    "main.77e03b6b.css.map": "/planet-fact-app/static/css/main.77e03b6b.css.map",
+    "main.fe07bb61.js.map": "/planet-fact-app/static/js/main.fe07bb61.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.77e03b6b.css",
+    "static/js/main.fe07bb61.js"
+  ]
+}
